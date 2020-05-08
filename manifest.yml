@@ -1,0 +1,18 @@
+applications:
+  - name: tokuo-sand-line
+    buildpacks:
+      - java_buildpack
+    instances: 1
+    memory: 512M
+    path: target/tokuo-sand-line.jar
+#    routes:
+#      - route:
+#    stack: cflinuxfs3
+#    health-check-type: http
+#    health-check-http-endpoint: /actuator/health
+#    services:
+#      - drain01-dev
+    env:
+      TZ: Asia/Tokyo
+#      SPRING_PROFILES_ACTIVE: dev
+      JBP_CONFIG_OPEN_JDK_JRE: '[memory_calculator: {stack_threads: 8}]'
