@@ -2,3 +2,10 @@ line.bot:
   channelSecret: ${LINE_BOT_CHANNEL_SECRET}
   channelToken: ${LINE_BOT_CHANNEL_TOKEN}
   handler.path: /callback
+
+# restTemplate設定
+tokuo.sand.rest-template:
+  my-user-id: ${TOKUO_USER_ID}
+  domain: "api.line.me"
+  base-endpoint: "/v2/bot"
+  bearer-token: ${LINE_BOT_CHANNEL_TOKEN}
